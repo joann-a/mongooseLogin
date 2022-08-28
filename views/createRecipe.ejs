@@ -1,0 +1,39 @@
+<h1> createRecipe </h1>
+<%- include ('./partials/messages') %>
+  <form action="/dashboard/createRecipe" method="POST">
+    <div>
+      <label for="recipeName">Recipe's name: </label>
+      <input type="text" name="recipeName" placeholder="Enter the Recipe's Name" />
+    </div>
+
+    <br><br>
+
+    <div>
+      <label for="intro">About the Recipe: </label>
+      <br><br>
+      <textarea id="intro" class="text" cols="86" rows="20" name="intro"></textarea>
+    </div>
+
+    <br><br>
+
+    <div>
+      <label for="ingredients">Enter the ingredients: </label>
+      <br><br>
+      <textarea id="ingredients" class="text" cols="86" rows="20" name="ingredients"></textarea>
+    </div>
+
+    <br><br>
+
+    <div>
+      <label for="method">Enter the Recipe's method: </label>
+      <br><br>
+      <textarea id="method" class="text" cols="86" rows="20" name="method"></textarea>
+    </div>
+
+    <div style="visibility: hidden; height: 100px;">
+      <input type="text" name="email" value=<%=user.email %> />
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  </form>

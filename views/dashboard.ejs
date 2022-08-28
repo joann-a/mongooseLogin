@@ -1,0 +1,15 @@
+<h1>Dashboard</h1>
+<p> Welcome <%= user.name %>
+    <p> Your email is <%= user.email %>
+    </p>
+    <a href="/users/logout">Logout</a>
+    <br><br>
+    <p>Lets Create a recipe! <a href='/dashboard/createRecipe'>Create</a></p>
+
+    <h2>Here are your recipes<h2>
+
+        <% recipesItSelfes.forEach(function(a) { %>
+          <h1 style="font-size:100%;"><a href="/dashboard/viewRecipe?id=<%= a.id %>">
+              <%= a.name %>
+            </a></h1>
+          <% }); %>
